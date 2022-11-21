@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const Appart = ({ cover, title }) => {
-    return (
-        <article className='location'>
-            <img src={cover} alt={title} />
-            <h2>{title}</h2>
-        </article>
-
-        
-    );
+const Appart = (props) => {
+  return (
+    <article className="location">
+      <img src={props.location.cover} alt={props.location.title} className="img-location" />
+      <h2 className="titre-location">{props.location.title}</h2>
+    </article>
+  );
 };
 
 export default Appart;
