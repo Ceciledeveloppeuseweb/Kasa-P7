@@ -1,6 +1,14 @@
 .logo{
-    width: 210px;
+    width: 211px;
     height: 68px;
+    @include tablette{
+        width: 140px;
+        height: 50px;
+    }
+    @include mobile{
+        width: 90px;
+        height: 40px;
+    }
     
 }
 
