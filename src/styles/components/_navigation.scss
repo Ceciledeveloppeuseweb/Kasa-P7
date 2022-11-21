@@ -1,81 +1,39 @@
-.navigation {
-  //position: absolute;
-  left: 90.65%;
-  right: 0%;
-  top: 25%;
-  bottom: 25%;
-
-  font-family: "Montserrat";
+.nav {
+  padding-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 142.6%;
   /* or 34px */
-
   display: flex;
   align-items: flex-end;
   text-align: right;
-
-  color: #ff6060;
+  color: $color-1;
+  @include tablette{
+    font-size: 18px;
+  }
+  @include mobile{
+    font-size: 12px;
+    padding-bottom: 40px;
+  }
 }
 
 a {
   text-decoration: none;
   padding-left: 30px;
-  color: #ff6060;
+  color: $color-1;
+  font-family: 'Montserrat', sans-serif;
+  @include mobile{
+    padding-left: 10px;
+  }
 }
+
+
 .nav-active {
   text-decoration-line: underline;
-
-  color: #ff6060;
+  color: $color-1;
 }
-// .navigation {
-//     ul {
-//       display: flex;
-//       margin: 30px;
+  
 
-//       a {
-//         text-decoration: none;
-//         padding: 10px;
 
-//         li {
-//           color: $color-1;
-//           transition: 0.2s;
-//           cursor: pointer;
-
-//           &:hover {
-//             color: $color-1;
-//           }
-//         }
-//       }
-
-//       .nav-active {
-//         position: relative;
-
-//         &::after {
-//           content: "";
-//           height: 4px;
-//           width: 0;
-//           background: $color-1;
-//           position: absolute;
-//           border-radius: 10px;
-//           bottom: 0px;
-//           left: 50%;
-//           transform: translateX(-50%);
-//           -webkit-animation: anim 0.3s ease forwards;
-//           animation: anim 0.6s ease forwards;
-
-//           @-webkit-keyframes anim {
-//             to {
-//               width: 100%;
-//             }
-//           }
-//           @keyframes anim {
-//             to {
-//               width: 100%;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }

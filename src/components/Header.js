@@ -5,13 +5,13 @@ import Navigation from "./Navigation";
 
 const Header = () => {
   return (
-    <div className="header">
+    <nav className="header">
       
           <Logo />
         
           <Navigation />
         
-    </div>
+    </nav>
   );
 };
 

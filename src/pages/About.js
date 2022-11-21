@@ -3,11 +3,15 @@ import Header from '../components/Header';
 
 const About = () => {
     return (
+        <React.Fragment>
+        <Header />
         <div>
-            <Header />
             <h1>A propos</h1>
         </div>
+        </React.Fragment>
     );
 };
+            
+
 
 export default About;
