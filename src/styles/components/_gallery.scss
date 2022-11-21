@@ -1,9 +1,12 @@
 .gallery {
-  display: flex;
-  flex-flow: row, wrap;
-  justify-content: space-around;
-  width: 86%;
-  height: 829px;
-  background: $color-3;
-  border-radius: 25px;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $color-3;
+    border-radius: 25px;
+    margin-top: 43px;
+    max-width: 1240px;
+    width: 86%;
+    background-color: dimgrey;
+    margin: auto;
+  }
