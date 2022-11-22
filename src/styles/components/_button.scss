@@ -1,0 +1,23 @@
+button {
+    font-size: 18px;
+    padding: 5px 5px 2px;
+    cursor: pointer;
+    transition: transform .3s;
+    background-color: $color-1;
+    color: white;
+    transform: rotate(0deg);
+    transition: all .2s;
+    border: none;
+    border-radius: 50%;
+}
+
+.btnActiveclasse {
+    transform: rotate(180deg);
+    transition: transform .3s both;
+}
+    
+    
+  
+
+
+
