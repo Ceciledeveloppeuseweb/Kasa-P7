@@ -7,24 +7,17 @@
   body {
     background: #fff;
     width: 100%;
-    font-family: font-1, sans-serif;
-    
-    
-    // @include verticalCenter;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1440px;
   }
+    
+    
+    
   li {
     list-style-type: none;
   }
 
   
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('https://fonts.googleapis.com/css2? family= Montserrat:wght@200;300;400;500;700 & display=swap');
-  }
- 
-  body{
-    max-width: 1440px;
-  }
 
   $color-1: #FF6060;
   $color-2: #F6F6F6;

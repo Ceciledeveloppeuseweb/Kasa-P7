@@ -1,6 +1,6 @@
 import React from "react";
 
-const Appart = (props) => {
+const Loc = (props) => {
   return (
     <article className="location">
       <img src={props.location.cover} alt={props.location.title} className="img-location" />
@@ -9,4 +9,4 @@ const Appart = (props) => {
   );
 };
 
-export default Appart;
+export default Loc;

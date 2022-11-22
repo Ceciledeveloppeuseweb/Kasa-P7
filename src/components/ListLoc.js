@@ -1,13 +1,13 @@
 import React from "react";
-import Appart from "../components/Appart";
+import Loc from "./Loc";
 import locations from "../datas/locations.json";
 
-const Gallery = () => {
+const ListLoc = () => {
   return (
-    <main className="gallery">
+    <main className="cards">
       {locations.map((location) => {
         return (
-          <Appart
+          <Loc
             key={location.id}
             location={location}
             
@@ -18,4 +18,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default ListLoc;

@@ -1,14 +1,21 @@
 .banner {
   position: relative;
   width: 86%;
-  max-width: 1240px; 
-  //margin: auto;
-  //margin-top: 63px ;
+  max-width: 1240px;
   background: #000000;
   border-radius: 25px;
   height: 223px;
-  
   margin: 63px auto 43px;
+  @include mobile {
+    background: #000000;
+    
+    
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+    height: 111px;
+    margin: 16px 20px;
+  }
 }
 
 .img-banner {
@@ -17,6 +24,9 @@
   width: 100%;
   height: 100%;
   filter: brightness(0.5);
+  @include mobile {
+    border-radius: 10px;
+  }
 }
 
 .titre-banner {
@@ -25,13 +35,18 @@
   left: 30px;
   right: 20px;
   bottom: 50px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   color: #fff;
   text-align: center;
   font-weight: normal;
   z-index: 20;
-  @include mobile{
+  @include mobile {
     font-size: 24px;
+    padding-right: 25%;
+    
+    display: flex;
+  align-items: left;
+  justify-content: flex-start;//revoir l'alignement du texte
   }
 }

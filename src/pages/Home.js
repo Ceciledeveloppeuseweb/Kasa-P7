@@ -1,8 +1,9 @@
 import React from "react";
 import Banner from "../components/Banner";
-import Gallery from "../components/Gallery";
+import ListLoc from "../components/ListLoc";
 import Header from "../components/Header";
-import banner from "../assets/banner.jpg";
+import banner from "../assets/banner-home.jpg";
+
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
         <img src={banner} alt="bannière paysage" className="img-banner" />
       </Banner>
 
-      <Gallery />
+      <ListLoc />
     </div>
   );
 };

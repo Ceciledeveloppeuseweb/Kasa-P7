@@ -1,5 +1,7 @@
 .logo{
-    width: 211px;
+    
+    align-items: flex-start;
+    max-width: 211px;
     height: 68px;
     @include tablette{
         width: 140px;

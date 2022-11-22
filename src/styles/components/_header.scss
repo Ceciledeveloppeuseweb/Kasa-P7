@@ -1,13 +1,18 @@
 .header {
   position: relative;
+  width: 86%;
+  max-width: 1240px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 86%;
-  max-width: 1240px;
-  
   height: 68px;
-  
-  margin: 40px 100px 0 100px;
-
+  margin: 40px auto 0;
+  @include mobile {
+    width: 90%;
+  }
 }
+  
+  
+  
+  
+
