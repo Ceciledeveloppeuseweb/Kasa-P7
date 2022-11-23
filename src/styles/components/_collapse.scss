@@ -1,28 +1,61 @@
-.collapse {
+.collapse-container {
+    max-width: 1023px;
+    width: 70%;
+    margin: auto;
+}
+    
+
+.collapse {//div titre
     max-width: 1023px;
     height: 47px;
     background-color: $color-1;
     color: $color-4;
     display: flex;
     flex-direction: row;
-    
     justify-content: space-between;
     margin: 31px auto;
-
+    border-radius: 5px;
 }
+
+    
 h2 {
-    color: black;
-    font-size: 18px;
-    z-index: 20;
+    color: $color-4;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-top: 10px;
+    
+    
 }
 
-.button-toggle {
-    font-size: 18px;
-    color: $color-4;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
-    // background-image: url(../../assets/chevron-fermé.png);
-    cursor: pointer;
-    z-index: 10;
+// .collapse-titre {
+//     color: $color-4;
+//     cursor: pointer;
+//     color: $color-4;
+//     font-size: 24px;
+//     font-weight: 500;
+//     padding-left: 20px;
+//     padding-top: 10px;
+// }
+    
+    
+   
+
+.description {
+    font-weight: 400;
+    font-size: 24px;
+    color: $color-1;
+    width: 100%;
+    max-width: 978px;
+    height: auto;
+    margin-top: 0;
+    border-radius: 5px;
+    background-color: $color-3;
+    @include mobile {
+        font-size: 12px;
+    }
+}
+p {
+    width: 90%;
+    margin: auto;
 }
