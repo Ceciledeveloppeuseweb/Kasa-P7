@@ -8,8 +8,6 @@
   margin: 63px auto 43px;
   @include mobile {
     background: #000000;
-    
-    
     border-radius: 10px;
     overflow: hidden;
     width: 90%;
@@ -17,13 +15,15 @@
     margin: 16px 20px;
   }
 }
+    
+    
 
 .img-banner {
   position: absolute;
   border-radius: 25px;
   width: 100%;
   height: 100%;
-  filter: brightness(0.5);
+  filter: brightness(0.7);
   @include mobile {
     border-radius: 10px;
   }
