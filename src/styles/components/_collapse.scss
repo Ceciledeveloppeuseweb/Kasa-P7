@@ -1,0 +1,28 @@
+.collapse {
+    max-width: 1023px;
+    height: 47px;
+    background-color: $color-1;
+    color: $color-4;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    margin: 31px auto;
+
+}
+h2 {
+    color: black;
+    font-size: 18px;
+    z-index: 20;
+}
+
+.button-toggle {
+    font-size: 18px;
+    color: $color-4;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // background-image: url(../../assets/chevron-fermé.png);
+    cursor: pointer;
+    z-index: 10;
+}
