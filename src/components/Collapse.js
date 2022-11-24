@@ -7,17 +7,17 @@ const Collapse = ({ title, description }) => {
   return isOpen ? (
     <div className="collapse-container">
       <div className="collapse" onClick={() => setIsOpen(false)}>
-        <h2 className="collapse-titre">{title}</h2>
+        <h2>{title}</h2>
         <Button />
       </div>
       <div className="description">
-        <p>{description}</p>
+        <p className="pDescription">{description}</p>
       </div>
     </div>
   ) : (
     <div className="collapse-container">
       <div className="collapse" onClick={() => setIsOpen(true)}>
-        <h2 className="button-toggle">{title}</h2>
+        <h2>{title}</h2>
         <Button />
       </div>
     </div>

@@ -2,28 +2,42 @@
   position: relative;
   width: 86%;
   max-width: 1240px;
-  background: #000000;
+  overflow: hidden;
   border-radius: 25px;
   height: 223px;
   margin: 63px auto 43px;
   @include mobile {
-    background: #000000;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 90%;
     height: 111px;
-    margin: 16px 20px;
+    border-radius: 10px;
+    min-width: 90%;
+    margin: 16px auto;
   }
 }
-    
-    
+
+.banner__about {
+  position: relative;
+  width: 86%;
+  max-width: 1240px;
+  overflow: hidden;
+  border-radius: 25px;
+  height: 223px;
+  margin: 63px auto 43px;
+  @include mobile {
+    height: 223px;
+    //min-width: 335px;
+  }
+}
 
 .img-banner {
   position: absolute;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 25px;
   width: 100%;
   height: 100%;
-  filter: brightness(0.7);
   @include mobile {
     border-radius: 10px;
   }
@@ -35,18 +49,23 @@
   left: 30px;
   right: 20px;
   bottom: 50px;
-  font-family: "Montserrat", sans-serif;
+  // filter: brightness(0.5);
   font-size: 48px;
-  color: #fff;
+  color: $color-white;
   text-align: center;
   font-weight: normal;
-  z-index: 20;
+  z-index: 2;
   @include mobile {
     font-size: 24px;
-    padding-right: 25%;
-    
-    display: flex;
-  align-items: left;
-  justify-content: flex-start;//revoir l'alignement du texte
+    top: 25%; 
+    right: 10%; 
+    bottom: initial;
+    left: 3%;
+    padding-right: 50%;
+    top: 50%;
+    left: 30px;
+    width: 100%;
+    transform: translate(0, -50%);
+    text-align: left;
   }
 }
