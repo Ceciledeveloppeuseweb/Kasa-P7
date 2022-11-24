@@ -1,15 +1,19 @@
 .cards {
     display: flex;
+    border: 2px black solid;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: $color-3;
+    justify-content: space-between;
+    background-color: $color-background-div-main;
     border-radius: 25px;
     margin-top: 43px;
     max-width: 1240px;
     width: 86%;
-    background-color: dimgrey;
     margin: auto;
-    @include mobile {
+    padding: 6px 20px;
+    @include tablette {
         width: 90%;
     }
   }
+    
+    

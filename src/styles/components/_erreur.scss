@@ -1,23 +1,13 @@
-// .linkErreur {
-//   text-align: center;
-//   margin: auto;
-//   color: $color-1;
-//   text-decoration: underline;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 18px;
-//   padding-left: 0;
-// }
-
 .erreur404 {
   text-align: center;
+  background-color: $color-header;
   margin: auto;
   margin-top: 80px;
   img {
     width: 40%;
   }
   .pErreur {
-    color: $color-1;
+    color: $color-ref-site;
     text-align: center;
     font-size: 36px;
     margin-top: 40px;
@@ -29,7 +19,7 @@
   }
   a {
     text-align: center;
-    color: $color-1;
+    color: $color-ref-site;
     text-decoration: underline;
     font-style: normal;
     font-weight: 500;

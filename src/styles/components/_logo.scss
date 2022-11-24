@@ -1,15 +1,21 @@
 .logo{
     
     align-items: flex-start;
-    max-width: 211px;
+    min-width: 211px;
+    width: 15%;
     height: 68px;
     @include tablette{
-        width: 140px;
+        min-width: 140px;
+        max-width: 180px;
+        width: 20%;
         height: 50px;
     }
     @include mobile{
-        width: 90px;
+        min-width: 90px;
+        max-width: 110px;
+        width: 35%;
         height: 40px;
+        
     }
     
 }

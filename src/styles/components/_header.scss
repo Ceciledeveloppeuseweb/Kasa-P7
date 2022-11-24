@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  //background-color: $color-header;
   width: 86%;
   max-width: 1240px;
   display: flex;
@@ -9,6 +10,7 @@
   margin: 40px auto 0;
   @include mobile {
     width: 90%;
+    
   }
 }
   
