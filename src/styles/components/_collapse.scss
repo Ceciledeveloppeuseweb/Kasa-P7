@@ -1,12 +1,17 @@
+.main-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .collapse-container {
     max-width: 1023px;
     width: 70%;
-    margin: auto;
+    margin: 0 auto 31px;
     background-color: $color-header;
 }
-    
 
-.collapse {//div titre
+.collapse { //div titre
     max-width: 1023px;
     height: 47px;
     background-color: $color-ref-site;
@@ -14,42 +19,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 31px auto;
+    margin: 0px auto 0px;
     border-radius: 5px;
 }
 
-    
 h2 {
     color: $color-h2;
     font-size: 24px;
     font-weight: 500;
     padding-left: 20px;
     padding-top: 10px;
-    
-    
 }
-
-// .collapse-titre {
-//     color: $color-4;
-//     cursor: pointer;
-//     color: $color-4;
-//     font-size: 24px;
-//     font-weight: 500;
-//     padding-left: 20px;
-//     padding-top: 10px;
-// }
-    
-    
-   
 
 .description {
     font-weight: 400;
     font-size: 24px;
-    
-    width: 100%;
+    width: 90%;
     max-width: 978px;
-    height: auto;
-    margin-top: 0;
+    margin: 36px 31px 0;
     border-radius: 5px;
     background-color: $color-background-div-main;
     z-index: 3;
@@ -57,10 +44,10 @@ h2 {
         font-size: 12px;
     }
 }
+    
 .pDescription {
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    margin-bottom: 19px;
     color: $color-ref-site;
     background-color: $color-background-div-main;
-    z-index: 10;
 }
