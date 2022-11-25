@@ -1,9 +1,8 @@
 button {
     font-size: 18px;
-    //padding: 2px 2px 0;
     cursor: pointer;
     transition: transform .3s;
-    background-color: $color-ref-site;
+    background-color: transparent;
     color: $color-white;
     transform: rotate(0deg);
     transition: all .2s;
@@ -11,11 +10,13 @@ button {
     border-radius: 50%;
     margin-right: 32px;
 }
-
+    
 .btnActiveclasse {
     transform: rotate(180deg);
     transition: transform .3s both;
 }
+    
+
     
     
   
