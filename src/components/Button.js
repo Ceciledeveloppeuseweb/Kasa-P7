@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';//Un Hook est une fonction qui permet de « se brancher » sur des fonctionnalités React
 
 import chevron from '../assets/chevron-ouvert.png';
 
 const Button = () => {
-    const [btnActive, setBtnActive] = useState(false);
+    const [btnActive, setBtnActive] = useState(false);//=> variable d'état qui permet d’utiliser un état local dans une fonction composant/déstructuration positionnelle
 
     function handleClick() {
         setBtnActive(!btnActive);
