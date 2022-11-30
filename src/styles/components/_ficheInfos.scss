@@ -1,0 +1,44 @@
+.fiche-contener{
+    width: 86%;
+    max-width: 1240px;
+    margin: auto;
+}
+
+.fiche-infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+}
+.fiche-titre{
+    color: $color-ref-site;
+    font-size: 36px;
+    font-weight: 500;
+}
+.localisation{
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-ref-site;
+}
+
+//host (name - picture )
+.host-infos {
+    display: flex;
+    flex-direction: row;
+    
+}
+ .host-name {
+    color: $color-ref-site;
+    font-weight: 500;
+    font-size: 18;
+    max-width: 93px;
+    text-align: center;
+    padding-top: 10px;
+ }
+ .host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: $color-host;
+
+ }

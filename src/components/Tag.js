@@ -1,9 +1,10 @@
+
+//rfc
 export default function Tag(props) {
     return (
-        
-            <li className="tagItem">{props.tag}</li>
-        
+        <div className="tagContainer">
+            <span className="tagButton">{props.tag}</span>
+        </div>
     );
 }
-//rfc
 
