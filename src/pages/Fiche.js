@@ -87,7 +87,7 @@ const Fiche = () => {
             </div>
 
             
-            <div className="contener-collapses">
+            <div className="collapses-logement">
               <Collapse
                 title="Descriptions"
                 description={description}
@@ -95,7 +95,7 @@ const Fiche = () => {
               />
               <Collapse
                 title="Equipements"
-                className="collapse-logement collapse-equipement"
+                className="collapse-logement"
                 description={equipments.map((el) => (
                   <li key={el} className="equipement">
                     {el}

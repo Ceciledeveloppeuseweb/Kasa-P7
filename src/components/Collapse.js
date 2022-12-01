@@ -6,7 +6,7 @@ const Collapse = ({ title, description }) => {
 
   return isOpen ? (
     <>
-      <div className="collapse collapse__logement" onClick={() => setIsOpen(false)}>
+      <div className="collapse" onClick={() => setIsOpen(false)}>
         <h2>{title}</h2>
         <Button />
       </div>
