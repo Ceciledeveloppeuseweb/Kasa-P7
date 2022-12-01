@@ -1,10 +1,5 @@
-
-//rfc
-export default function Tag(props) {
-    return (
-        <div className="tagContainer">
-            <span className="tagButton">{props.tag}</span>
-        </div>
-    );
+import React from "react";
+//rfc/rsc
+export default function Tag({ tag }) {
+  return <span className="tagItem">{tag}</span>;
 }
-

@@ -1,33 +1,26 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-//import Tag from "../components/Tag";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Collapse from "../components/Collapse";
 import Host from "../components/Host";
-//import Carrousel from "../components/Carrousel";
+import Tag from "../components/Tag";
+import Collapse from "../components/Collapse";
 
 const Fiche = () => {
   const params = useParams();
-  const [data, setData] = useState({}); //tableau
+  const [data, setData] = useState(); //tableau
   const navigate = useNavigate();
   //console.log(params);
 
   useEffect(() => {
     const displayLocation = async () => {
-      // const response = await axios.get("/locations.JSON");
-      // const data = response.data.find(({id}) => id === params.id);
-      // response.data.map(() => setData(data));
-      // if (data === undefined) {
-      //   navigate("/404", { state: { message: "error" } });
-      // }
       const result = await axios.get("/locations.JSON"); //axios va me chercher l'Url
-
-      //console.log("resultat : ", result.data);
-      const locationData = result.data.find(({ id }) => id === params.id);
-      result.data.map(() => setData(locationData));
-      if (locationData === undefined) {
+      const logement = result.data.find(({ id }) => id === params.id);
+      console.log(logement);
+       result.data.map(() => setData(logement));
+      //setData(logement);
+      if (logement === undefined) {
         navigate("/404", { state: { message: "error" } });
       }
     };
@@ -35,15 +28,29 @@ const Fiche = () => {
     // eslint-disable-next-line
   }, []);
 
-  //const pictures = data && data.cover; //affichage conditionnel, si les données st trouvées par axios alors on affiche
+  //const pictures = data && data.cover;
   // const {title, pictures, description, host, rating, location, equipments, tags} = data;
   const title = data && data.title;
+  console.log(title);
+
   const location = data && data.location;
-  //const tags = data && data.tags;
+  console.log(location);
+
+  //const tags = [];
+   const tags = data && data.tags;
+  console.log(tags);
+
+  const host = data && data.host; //
+  console.log(host);
+
   const description = data && data.description;
-  //const equipments = data && data.equipments;
-  const host = data && data.host;
-  // console.log("image", picture);
+  console.log(description);
+
+  //const equipments = [];
+  const equipments = data && data.equipments;
+  console.log(equipments);
+
+  //affichage conditionnel, si les données st trouvées par axios alors on affiche
   return (
     data && (
       <>
@@ -64,19 +71,37 @@ const Fiche = () => {
             <Host name={host.name} picture={host.picture} />
           </section>
 
-          <section className="div-carrousels">
+          <section className="contenerDivs">
+            <div className="tagsEtRating">
+              <div className="tags">
+                {tags.map((tag) => (
+                  <Tag key={tag} className="tag" tag={tag} />
+                  // <li key={el} className="tag" >{el}</li>
+                ))}
+              </div>
+            </div>
+
             {/* <ul className="tagContainer">
                 {tags.map((tag, index) => (
                   <Tag key={index} tag={tag} />
                 ))}
               </ul> */}
-            <Collapse title="Descriptions" description={description} />
-            {/* <Collapse
-              title="Equipements"
-              description={equipments.map((equipment) => (
-                <li key={equipment}>{equipment}</li>
-              ))}
-            /> */}
+            <div className="contener-collapses">
+              <Collapse
+                title="Descriptions"
+                description={description}
+                className="collapse-logement collapse"
+              />
+              <Collapse
+                title="Equipements"
+                className="collapse-logement collapse-equipement"
+                description={equipments.map((el) => (
+                  <li key={el} className="equipement">
+                    {el}
+                  </li>
+                ))}
+              />
+            </div>
           </section>
         </main>
         <Footer />
