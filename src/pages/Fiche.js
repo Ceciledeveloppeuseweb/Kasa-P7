@@ -95,7 +95,7 @@ const Fiche = () => {
               />
               <Collapse
                 title="Equipements"
-                className="collapse-logement"
+                className="collapse__logement"
                 description={equipments.map((el) => (
                   <li key={el} className="equipement">
                     {el}

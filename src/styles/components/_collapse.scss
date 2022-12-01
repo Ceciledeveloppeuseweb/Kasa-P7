@@ -5,10 +5,27 @@
   width: 70%;
   margin: auto;
 }
+
+//collapses du logement :
 .collapses-logement {
-  width: 86%;
-  margin: auto;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+}
+.collapses-logement > .collapse-box__logement {
+    width: 45%;
+}
+.collapse-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    
+
+}
+.collapse-box__logement {
+    width: 45%;
 }
 
 .collapse-container {
@@ -21,17 +38,24 @@
   //background-color: $color-header;
 }
 
-.collapse {
-  height: 47px;
-  background-color: $color-ref-site;
-  color: $color-ref-site;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 31px auto;
-  border-radius: 5px;
-  width: 100%;
-}
+.collapse{
+    height: 47px;
+    background-color: $color-ref-site;
+    color: $color-ref-site;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 31px auto;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  
+  
+
+
+
+
 
 h2 {
   color: $color-h2;
@@ -41,34 +65,28 @@ h2 {
   padding-top: 10px;
 }
 
-// .description {
-//   font-weight: 400;
-//   font-size: 24px;
-//   width: 100%;
-//   max-width: 978px;
-//   margin: auto;
-//   padding: 36px 31px;
-//   border-radius: 5px;
-//   background-color: $color-background-div-main;
-//   z-index: 3;
-//   @include mobile {
-//     font-size: 12px;
-//   }
-// }
-
-.pDescription {
-    padding: 36px 31px 0 0;
-  width: 90%;
+.description {
   font-weight: 400;
   font-size: 24px;
+  width: 100%;
   max-width: 978px;
   margin: auto;
+  padding: 36px 31px;
   border-radius: 5px;
-  width: 100%;
-  margin-bottom: 19px;
-  color: $color-ref-site;
   background-color: $color-background-div-main;
+  z-index: 3;
   @include mobile {
     font-size: 12px;
   }
 }
+
+.pDescription {
+  width: 100%;
+  margin-bottom: 19px;
+  color: $color-ref-site;
+  background-color: $color-background-div-main;
+   @include mobile {
+    font-size: 12px;
+  }
+}
+  
