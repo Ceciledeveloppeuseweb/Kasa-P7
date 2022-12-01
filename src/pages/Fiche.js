@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Host from "../components/Host";
 import Tag from "../components/Tag";
 import Collapse from "../components/Collapse";
+import Rate from "../components/Rate";
 
 const Fiche = () => {
   const params = useParams();
@@ -50,6 +51,9 @@ const Fiche = () => {
   const equipments = data && data.equipments;
   console.log(equipments);
 
+   const rating = data && data.rating;
+   console.log(rating);
+
   //affichage conditionnel, si les données st trouvées par axios alors on affiche
   return (
     data && (
@@ -79,18 +83,15 @@ const Fiche = () => {
                   // <li key={el} className="tag" >{el}</li>
                 ))}
               </div>
+              <Rate rating={rating}/>
             </div>
 
-            {/* <ul className="tagContainer">
-                {tags.map((tag, index) => (
-                  <Tag key={index} tag={tag} />
-                ))}
-              </ul> */}
+            
             <div className="contener-collapses">
               <Collapse
                 title="Descriptions"
                 description={description}
-                className="collapse-logement collapse"
+                className="collapse__logement"
               />
               <Collapse
                 title="Equipements"

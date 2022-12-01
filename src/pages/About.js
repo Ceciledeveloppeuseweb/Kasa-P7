@@ -13,7 +13,7 @@ const About = () => {
         <img src={banner} alt="paysage montagnard" className="img-banner" />
       </Banner>
       <main className="main-about">
-        <Collapse
+        <Collapse 
           title="Fiabilité"
           description="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes."
         />

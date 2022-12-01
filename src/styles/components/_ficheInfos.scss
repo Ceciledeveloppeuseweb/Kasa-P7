@@ -1,95 +1,106 @@
-.fiche-contener{
-    width: 86%;
-    max-width: 1240px;
-    margin: auto;
+.fiche-contener {
+  width: 86%;
+  max-width: 1240px;
+  margin: auto;
 }
 
-.fiche-infos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 0;
+.fiche-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 0;
 }
-.fiche-titre{
-    color: $color-ref-site;
-    font-size: 36px;
-    font-weight: 500;
+.fiche-titre {
+  color: $color-ref-site;
+  font-size: 36px;
+  font-weight: 500;
 }
-.localisation{
-    font-size: 18px;
-    font-weight: 500;
-    color: $color-ref-site;
+.localisation {
+  font-size: 18px;
+  font-weight: 500;
+  color: $color-ref-site;
 }
 
 //host (name - picture )
 .host-infos {
-    display: flex;
-    flex-direction: row;
-    
+  display: flex;
+  flex-direction: row;
 }
- .host-name {
-    color: $color-ref-site;
-    font-weight: 500;
-    font-size: 18;
-    max-width: 93px;
-    text-align: center;
-    padding-top: 15px;
-    margin-right: 10px;
-    
-    
- }
- .host-picture {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background-color: $color-host;
+.host-name {
+  color: $color-ref-site;
+  font-weight: 500;
+  font-size: 18;
+  max-width: 93px;
+  text-align: center;
+  padding-top: 15px;
+  margin-right: 10px;
+  //width : min-content
+  //'column-gap' et 'row-gap' avec flexbox défini en 'flex-direction: row' ou 'flex-direction: column'
+}
+.host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: $color-host;
+}
 
- }
+// container divs tags - rating - collapses
+.contenerDivs {
+  margin: 30px 0;
+}
 
- // container divs tags - rating - collapses
- .contenerDivs {
-    margin: 30px 0;
- }
+//tags et rating
+.tagsEtRating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.rateBox > img {
+  width: 30px;
+  height: 30px;
+}
 
- // tags
+// tags
 .tags {
-    display: flex;
-    flex-direction: row;
-    margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
 }
 
- .tagItem {
-    min-width: 115px;
-    width: auto;
-    height: 25px;
-    //height: auto;
-    border-radius: 25px;
-    background-color: $color-ref-site;
-    color: $color-white;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    margin-right: 10px;
-    padding: 5px;
+.tagItem {
+  min-width: 115px;
+  width: auto;
+  height: 25px;
+  //height: auto;
+  border-radius: 25px;
+  background-color: $color-ref-site;
+  color: $color-white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-right: 10px;
+  padding: 5px;
 }
 
 .tagsEtRating {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
-    
-   
 
+//collapses
+.contener-collapses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
- //collapses
- .contener-collapses {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 86%;
-    margin: auto;
-    max-width: 1240px;
- }
-
- .collapse-logement {
-    width: 40%;
- }
+.collapse__logement {
+  height: 47px;
+  background-color: $color-ref-site;
+  color: $color-ref-site;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 31px auto;
+  border-radius: 5px;
+  width: 90%;
+}

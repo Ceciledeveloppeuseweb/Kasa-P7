@@ -1,53 +1,100 @@
 .main-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+.contener-collapse {
+  width: 86%;
+  margin: auto;
+  justify-content: space-between;
 }
 
 .collapse-container {
-    max-width: 1023px;
-    width: 70%;
-    margin: 0 auto 31px;
-    background-color: $color-header;
+  // max-width: 1023px;
+  // width: 70%;
+  margin: 0 auto 31px;
+  width: 86%;
+  margin: auto;
+  justify-content: space-between;
+  //background-color: $color-header;
 }
 
-.collapse { //div titre
-    max-width: 1023px;
-    height: 47px;
-    background-color: $color-ref-site;
-    color: $color-ref-site;
+.collapse{
+  //div titre
+  // max-width: 1023px;
+  height: 47px;
+  background-color: $color-ref-site;
+  color: $color-ref-site;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 31px auto;
+  border-radius: 5px;
+  width: 100%;
+}
+// .collapse__about {
+//     height: 47px;
+//   background-color: $color-ref-site;
+//   color: $color-ref-site;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   margin: 31px auto;
+//   border-radius: 5px;
+//   width: 100%;
+
+// }
+
+//collapses - Logement
+
+.contener-collapses {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0px auto 0px;
-    border-radius: 5px;
-}
+  }
+  
+  .collapse__logement {
+    // height: 47px;
+    // background-color: $color-ref-site;
+    // color: $color-ref-site;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // margin: 31px auto;
+    // border-radius: 5px;
+    width: 40%;
+    
+  }
+// ------------------------- //  
+
 
 h2 {
-    color: $color-h2;
-    font-size: 24px;
-    font-weight: 500;
-    padding-left: 20px;
-    padding-top: 10px;
+  color: $color-h2;
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 .description {
-    font-weight: 400;
-    font-size: 24px;
-    width: 90%;
-    max-width: 978px;
-    margin: 36px 31px 0;
-    border-radius: 5px;
-    background-color: $color-background-div-main;
-    z-index: 3;
-    @include mobile {
-        font-size: 12px;
-    }
+  font-weight: 400;
+  font-size: 24px;
+  width: 100%;
+  max-width: 978px;
+  padding: 36px 31px;
+  border-radius: 5px;
+  background-color: $color-background-div-main;
+  z-index: 3;
+  @include mobile {
+    font-size: 12px;
+  }
 }
-    
+
 .pDescription {
-    width: 100%;
-    margin-bottom: 19px;
-    color: $color-ref-site;
-    background-color: $color-background-div-main;
+  width: 100%;
+  margin-bottom: 19px;
+  color: $color-ref-site;
+  background-color: $color-background-div-main;
 }
