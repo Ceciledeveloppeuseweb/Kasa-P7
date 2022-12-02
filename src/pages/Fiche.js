@@ -11,7 +11,7 @@ import Carrousel from "../components/Carrousel";
 
 const Fiche = () => {
   const params = useParams();
-  const [data, setData] = useState(); //tableau
+  const [data, setData] = useState(); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,6 +20,7 @@ const Fiche = () => {
       const logement = result.data.find(({ id }) => id === params.id);
       console.log(logement);
       result.data.map(() => setData(logement));
+      //setData(logement);
 
       if (logement === undefined) {
         navigate("/404", { state: { message: "error" } });
@@ -52,8 +53,8 @@ const Fiche = () => {
         <Header />
         <main className="fiche-contener">
           <div className="banner-fiche">
-            {pictures.map((picture) => (
-              <Carrousel key={picture.index} picture={picture} />
+            {pictures.map((picture, index) => (
+              <Carrousel key={index} pictures={pictures} picture={picture} />
             ))}
           </div>
           <section className="fiche-infos">

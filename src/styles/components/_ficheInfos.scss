@@ -1,3 +1,70 @@
+// Carrousel
+// .contener-slide {
+//   position: relative;
+//   width: 86%;
+//   max-width: 1240px;
+//   height: 415px;
+//   overflow: hidden;
+//   background-color: cadetblue;
+//   position: relative;
+//   margin: 25px auto;
+
+// }
+.banner-fiche {
+  position: relative;
+  width: 86%;
+  max-width: 1240px;
+  height: 415px;
+  overflow: hidden;
+  background-color: rgb(222, 235, 236);
+  position: relative;
+  margin: 25px auto;
+}
+
+.slideLogement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  border-radius: 25px;
+  width: 100%;
+  height: 415px;
+}
+
+.btn-droite {
+  position: absolute;
+  top: 40%;
+  right: 23px;
+  width: 47px;
+  height: 79px;
+}
+.btn-droite__clear {
+  opacity: 0;
+}
+
+.btn-gauche {
+  position: absolute;
+  top: 40%;
+  left: 23px;
+  width: 47px;
+  height: 79px;
+}
+.btn-gauche__clear {
+  opacity: 0;
+}
+
+.compteur {
+  position: absolute;
+  font-size: 18px;
+  bottom: 25px;
+  left: 50%;
+  right: 50%;
+}
+
+// ----------------- //
+
 .fiche-contener {
   width: 86%;
   max-width: 1240px;
@@ -84,9 +151,4 @@
 
 .tagsEtRating {
   margin-bottom: 30px;
-}
-
-.slideLogement {
-  width: 340px;
-  height: 340px;
 }

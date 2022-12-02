@@ -1,47 +1,49 @@
 import React, { useState } from "react";
-import VectorD from "../assets/Vector-droite.jpg";
-import VectorG from "../assets/Vector-gauche.jpg";
+import vectorD from "../assets/vector-droite.jpg";
+import vectorG from "../assets/vector-gauche.jpg";
 
 function Carrousel(pictures) {
-    console.log(pictures);
-  const [currentIndex, setCurrentIndex] = useState(1);
-  //const index = pictures.length;
+  console.log(pictures);
 
+  const [currentPicture, setCurrentPicture] = useState(1);
 
   function nextSlide() {
-    setCurrentIndex(currentIndex === pictures.length - 1 ? 1 : currentIndex + 1);
-  };
+    setCurrentPicture(
+      currentPicture === pictures.length - 1 ? 1 : currentPicture + 1
+    );
+  }
 
   function preventSlide() {
-    setCurrentIndex(currentIndex === 1 ? pictures.length - 1 : currentIndex - 1);
-  };
+    setCurrentPicture(
+      currentPicture === 1 ? pictures.length - 1 : currentPicture - 1
+    );
+  }
 
   return (
-    <div className="contener-slide">
-      
-        <img
-         
-          src={pictures[currentIndex]}
-          alt="slide du logement"
-          className="slideLogement"
-        />
-      
+    <>
+      <img
+        src={pictures[currentPicture]}
+        alt="slide du logement"
+        className="slideLogement"
+      />
       <div className="btns-directionnels">
-        <button
-          className={pictures.length === 1 ? "btn-gauche__clear" : "btn-gauche"} 
+        <div
+          className={pictures.length === 1 ? "btn-gauche__clear" : "btn-gauche"}
           onClick={preventSlide}
         >
-          {VectorG}
-        </button>
-        <button
+          {vectorG}
+        </div>
+        <div
           className={pictures.length === 1 ? "btn-droite__clear" : "btn-droite"}
           onClick={nextSlide}
         >
-          {VectorD}
-        </button>
+          {vectorD}
+        </div>
       </div>
-      <div className="compteur">{currentIndex}/{pictures.length}</div>
-    </div>
+      <div className="compteur">
+        {currentPicture}/{pictures.length}
+      </div>
+    </>
   );
 }
 
