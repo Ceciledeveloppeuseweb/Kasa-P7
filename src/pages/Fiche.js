@@ -7,20 +7,20 @@ import Host from "../components/Host";
 import Tag from "../components/Tag";
 import Collapse from "../components/Collapse";
 import Rate from "../components/Rate";
+import Carrousel from "../components/Carrousel";
 
 const Fiche = () => {
   const params = useParams();
   const [data, setData] = useState(); //tableau
   const navigate = useNavigate();
-  //console.log(params);
 
   useEffect(() => {
     const displayLocation = async () => {
       const result = await axios.get("/locations.JSON"); //axios va me chercher l'Url
       const logement = result.data.find(({ id }) => id === params.id);
       console.log(logement);
-       result.data.map(() => setData(logement));
-      //setData(logement);
+      result.data.map(() => setData(logement));
+
       if (logement === undefined) {
         navigate("/404", { state: { message: "error" } });
       }
@@ -29,30 +29,21 @@ const Fiche = () => {
     // eslint-disable-next-line
   }, []);
 
-  //const pictures = data && data.cover;
-  // const {title, pictures, description, host, rating, location, equipments, tags} = data;
   const title = data && data.title;
-  console.log(title);
 
   const location = data && data.location;
-  console.log(location);
 
-  //const tags = [];
-   const tags = data && data.tags;
-  console.log(tags);
+  const tags = data && data.tags;
 
   const host = data && data.host; //
-  console.log(host);
 
   const description = data && data.description;
-  console.log(description);
 
-  //const equipments = [];
   const equipments = data && data.equipments;
-  console.log(equipments);
 
-   const rating = data && data.rating;
-   console.log(rating);
+  const rating = data && data.rating;
+
+  const pictures = data && data.pictures;
 
   //affichage conditionnel, si les données st trouvées par axios alors on affiche
   return (
@@ -60,21 +51,18 @@ const Fiche = () => {
       <>
         <Header />
         <main className="fiche-contener">
-          {/* // <div>
-         //   {pictures.map((picture) */}
-          {/* // <Carrousel key={picture} picture={picture} />)}
-         // </div> */}
-          <div className="banner-fiche">Banner Fiche Location</div>
-
+          <div className="banner-fiche">
+            {pictures.map((picture) => (
+              <Carrousel key={picture.index} picture={picture} />
+            ))}
+          </div>
           <section className="fiche-infos">
             <section className="div-titre">
               <h1 className="fiche-titre">{title}</h1>
               <p className="localisation">{location}</p>
             </section>
-
             <Host name={host.name} picture={host.picture} />
           </section>
-
           <section className="contenerDivs">
             <div className="tagsEtRating">
               <div className="tags">
@@ -83,10 +71,8 @@ const Fiche = () => {
                   // <li key={el} className="tag" >{el}</li>
                 ))}
               </div>
-              <Rate rating={rating}/>
+              <Rate rating={rating} />
             </div>
-
-            
             <div className="collapses-logement">
               <Collapse
                 title="Descriptions"
