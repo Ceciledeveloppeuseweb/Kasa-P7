@@ -9,6 +9,11 @@ button {
     border: none;
     border-radius: 50%;
     margin-right: 32px;
+    @include mobile {
+        transform: scale(60%);
+        margin-right: 5px;
+        margin-top: 3px;
+    }
 }
     
 .btnActiveclasse {

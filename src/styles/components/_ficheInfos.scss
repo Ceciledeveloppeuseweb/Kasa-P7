@@ -27,6 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  //object-fit: cover;
   object-fit: cover;
   border-radius: 25px;
   width: 100%;
@@ -40,6 +41,11 @@
   width: 47px;
   height: 79px;
   cursor: pointer;
+  
+  &:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
 }
 .btn-droite__clear {
   opacity: 0;
@@ -52,6 +58,10 @@
   width: 47px;
   height: 79px;
   cursor: pointer;
+  &:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
 }
 .btn-gauche__clear {
   opacity: 0;

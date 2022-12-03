@@ -23,6 +23,8 @@
   height: 223px;
   margin: 63px auto 43px;
   @include mobile {
+    width: 90%;
+    margin: 17px auto 0;
     height: 223px;
     //min-width: 335px;
   }
