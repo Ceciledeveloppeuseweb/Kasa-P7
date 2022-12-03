@@ -19,8 +19,12 @@ const Fiche = () => {
       const result = await axios.get("/locations.JSON"); //axios va me chercher l'Url
       const logement = result.data.find(({ id }) => id === params.id);
       console.log(logement);
-      result.data.map(() => setData(logement));
-      //setData(logement);
+      console.log(logement.id);
+      console.log(logement.pictures);
+      console.log(logement.title);
+      console.log(logement.location);
+      //result.data.map(() => setData(logement));
+      setData(logement);
 
       if (logement === undefined) {
         navigate("/404", { state: { message: "error" } });
@@ -30,21 +34,6 @@ const Fiche = () => {
     // eslint-disable-next-line
   }, []);
 
-  const title = data && data.title;
-
-  const location = data && data.location;
-
-  const tags = data && data.tags;
-
-  const host = data && data.host; //
-
-  const description = data && data.description;
-
-  const equipments = data && data.equipments;
-
-  const rating = data && data.rating;
-
-  const pictures = data && data.pictures;
 
   //affichage conditionnel, si les données st trouvées par axios alors on affiche
   return (
@@ -53,37 +42,38 @@ const Fiche = () => {
         <Header />
         <main className="fiche-contener">
           <div className="banner-fiche">
-            {pictures.map((picture, index) => (
+            {/* {pictures.map((picture, index) => (
               <Carrousel key={index} pictures={pictures} picture={picture} />
-            ))}
+             ))} */}
+             <Carrousel  pictures={data.pictures} picture={data.pictures.picture} />
           </div>
           <section className="fiche-infos">
             <section className="div-titre">
-              <h1 className="fiche-titre">{title}</h1>
-              <p className="localisation">{location}</p>
+              <h1 className="fiche-titre">{data.title}</h1>
+              <p className="localisation">{data.location}</p>
             </section>
-            <Host name={host.name} picture={host.picture} />
+            <Host name={data.host.name} picture={data.host.picture} />
           </section>
           <section className="contenerDivs">
             <div className="tagsEtRating">
               <div className="tags">
-                {tags.map((tag) => (
+                {data.tags.map((tag) => (
                   <Tag key={tag} className="tag" tag={tag} />
                   // <li key={el} className="tag" >{el}</li>
                 ))}
               </div>
-              <Rate rating={rating} />
+              <Rate rating={data.rating} />
             </div>
             <div className="collapses-logement">
               <Collapse
                 title="Descriptions"
-                description={description}
+                description={data.description}
                 className="collapse__logement"
               />
               <Collapse
                 title="Equipements"
                 className="collapse__logement"
-                description={equipments.map((el) => (
+                description={data.equipments.map((el) => (
                   <li key={el} className="equipement">
                     {el}
                   </li>

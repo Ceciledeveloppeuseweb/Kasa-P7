@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import vectorD from "../assets/vector-droite.jpg";
-import vectorG from "../assets/vector-gauche.jpg";
+import flecheD from "../assets/fleched.svg";
+import flecheG from "../assets/flecheg.svg";
 
-function Carrousel(pictures) {
+function Carrousel({pictures}) {
   console.log(pictures);
 
   const [currentPicture, setCurrentPicture] = useState(1);
@@ -27,18 +27,18 @@ function Carrousel(pictures) {
         className="slideLogement"
       />
       <div className="btns-directionnels">
-        <div
+        <img src={flecheG} alt="bouton slide précédent"
           className={pictures.length === 1 ? "btn-gauche__clear" : "btn-gauche"}
           onClick={preventSlide}
-        >
-          {vectorG}
-        </div>
-        <div
+        />
+          
+        
+        <img src={flecheD} alt="bouton slide suivant"
           className={pictures.length === 1 ? "btn-droite__clear" : "btn-droite"}
           onClick={nextSlide}
-        >
-          {vectorD}
-        </div>
+        />
+          
+        
       </div>
       <div className="compteur">
         {currentPicture}/{pictures.length}

@@ -12,12 +12,12 @@
 // }
 .banner-fiche {
   position: relative;
-  width: 86%;
-  max-width: 1240px;
+  width: 100%;
+  //max-width: 1240px;
   height: 415px;
   overflow: hidden;
   background-color: rgb(222, 235, 236);
-  position: relative;
+ 
   margin: 25px auto;
 }
 
@@ -39,6 +39,7 @@
   right: 23px;
   width: 47px;
   height: 79px;
+  cursor: pointer;
 }
 .btn-droite__clear {
   opacity: 0;
@@ -50,6 +51,7 @@
   left: 23px;
   width: 47px;
   height: 79px;
+  cursor: pointer;
 }
 .btn-gauche__clear {
   opacity: 0;
