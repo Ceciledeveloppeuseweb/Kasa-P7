@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 60%;
+  width: 70%;
   margin: auto;
   @include mobile {
     width: 90%;
@@ -27,11 +27,10 @@
   @include tablette {
     width: 100%;
   }
-} 
+}
 
+//Collapse - Type : //
 
-  
-  //Collapse - Type : //
 .collapse {
   height: 47px;
   background-color: $color-ref-site;
@@ -39,7 +38,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 31px auto;
+  margin: 31px auto 0;
   border-radius: 5px;
   width: 100%;
   @include mobile {
@@ -67,12 +66,13 @@ h2 {
   max-width: 978px;
   margin: auto;
   padding: 36px 31px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: $color-background-div-main;
   z-index: 3;
   @include mobile {
     font-size: 12px;
     padding-top: 20px;
+    border-radius: 5px;
   }
 }
 
@@ -80,10 +80,9 @@ h2 {
   width: 100%;
   margin-bottom: 19px;
   color: $color-ref-site;
-  background-color: $color-background-div-main;
   @include mobile {
     font-size: 12px;
   }
 }
-// Fin CSS du Collapse-Type //
 
+// Fin CSS du Collapse-Type //
