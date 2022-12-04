@@ -124,6 +124,7 @@
   color: $color-ref-site;
   @include mobile {
     font-size: 14px;
+    margin-top: 5px;
   }
 }
 
@@ -195,8 +196,8 @@
   @include tablette {
     min-width: 84px;
     font-size: 10px;
-    min-height: 18px;
+    height: 18px;
     border-radius: 5px;
-    padding-top: 8px;
+    padding-top: 5px;
   }
 }
