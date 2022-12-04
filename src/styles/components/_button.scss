@@ -19,7 +19,15 @@ button {
 .btnActiveclasse {
     transform: rotate(180deg);
     transition: transform .3s both;
+    @include mobile {
+        transform: rotate(180deg) scale(60%);
+        margin-right: 5px;
+        margin-top: 0;
+    }
+    
 }
+
+
     
 
     
