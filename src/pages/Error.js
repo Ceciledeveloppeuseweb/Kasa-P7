@@ -12,6 +12,9 @@ const Error = () => {
         <p className="pErreur">
           Oups ! La page que vous demandez n'existe pas.
         </p>
+        <p className="pErreur__mobile">
+          Oups ! La page que<br/>vous demandez n'existe pas.
+        </p>
       <Link to="/" className="linkErreur">
         Retourner sur la page d’accueil
       </Link>
