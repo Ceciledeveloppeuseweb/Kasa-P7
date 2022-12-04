@@ -69,23 +69,21 @@ const Fiche = () => {
             </section>
           </section>
 
-          <section className="contenerDivs">
-            <div className="collapses-logement">
-              <Collapse
-                title="Descriptions"
-                description={data.description}
-                className="collapse__logement"
-              />
-              <Collapse
-                title="Equipements"
-                className="collapse__logement"
-                description={data.equipments.map((el) => (
-                  <li key={el} className="equipement">
-                    {el}
-                  </li>
-                ))}
-              />
-            </div>
+          <section className="collapses-logement">
+            <Collapse
+              title="Descriptions"
+              description={data.description}
+              className="collapse__logement"
+            />
+            <Collapse
+              title="Equipements"
+              className="collapse__logement"
+              description={data.equipments.map((el) => (
+                <li key={el} className="equipement">
+                  {el}
+                </li>
+              ))}
+            />
           </section>
         </main>
         <Footer />
