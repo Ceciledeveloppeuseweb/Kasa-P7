@@ -1,15 +1,4 @@
-// Carrousel
-// .contener-slide {
-//   position: relative;
-//   width: 86%;
-//   max-width: 1240px;
-//   height: 415px;
-//   overflow: hidden;
-//   background-color: cadetblue;
-//   position: relative;
-//   margin: 25px auto;
-
-// }
+// BANNER page fiche logement//
 .banner-fiche {
   position: relative;
   width: 100%;
@@ -17,8 +6,11 @@
   height: 415px;
   overflow: hidden;
   background-color: rgb(222, 235, 236);
- 
+  border-radius: 25px;
   margin: 25px auto;
+  @include mobile {
+    height: 255px;
+  }
 }
 
 .slideLogement {
@@ -27,11 +19,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  //object-fit: cover;
   object-fit: cover;
   border-radius: 25px;
   width: 100%;
-  height: 415px;
+  height: 100%;
 }
 
 .btn-droite {
@@ -41,12 +32,16 @@
   width: 47px;
   height: 79px;
   cursor: pointer;
-  
-  &:hover{
+  &:hover {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
   }
+  @include mobile {
+    transform: scale(25%);
+    right: -10px;
+  }
 }
+
 .btn-droite__clear {
   opacity: 0;
 }
@@ -58,9 +53,13 @@
   width: 47px;
   height: 79px;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
+  }
+  @include mobile {
+    transform: scale(25%);
+    left: -10px;
   }
 }
 .btn-gauche__clear {
@@ -74,36 +73,77 @@
   left: 50%;
   right: 50%;
 }
+// ----------------------- //
 
-// ----------------- //
-
-.fiche-contener {
-  width: 86%;
-  max-width: 1240px;
-  margin: auto;
-}
+// FICHE - INFOS //
+// div infos //
 
 .fiche-infos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 0;
+  margin-top: 5px;
+  @include tablette {
+    flex-direction: column;
+  }
 }
+.infos-TitrePTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fiche-contener {
+  // => main de la page fiche
+  width: 86%;
+  max-width: 1240px;
+  margin: auto;
+  @include mobile {
+    width: 90%;
+    margin: auto;
+  }
+}
+
 .fiche-titre {
+  // "title"
   color: $color-ref-site;
   font-size: 36px;
   font-weight: 500;
+  @include tablette {
+    font-size: 24px;
+  }
+  @include mobile {
+    font-size: 18px;
+  }
 }
+
 .localisation {
+  // "location"
   font-size: 18px;
   font-weight: 500;
   color: $color-ref-site;
+  @include mobile {
+    font-size: 14px;
+  }
 }
 
 //host (name - picture )
+.infos-HostRating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include tablette {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-left: -5px;
+  }
+}
+
 .host-infos {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 .host-name {
   color: $color-ref-site;
@@ -123,27 +163,20 @@
   background-color: $color-host;
 }
 
-// container divs tags - rating - collapses
-.contenerDivs {
-  margin: 30px 0;
-}
-
-//tags et rating
-.tagsEtRating {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .rateBox > img {
   width: 30px;
   height: 30px;
+  @include tablette {
+    margin-top: 10%;
+    transform: scale(50%);
+  }
 }
 
 // tags
 .tags {
   display: flex;
   flex-direction: row;
-  margin-left: 0;
+  margin-top: 20px;
 }
 
 .tagItem {
@@ -159,8 +192,11 @@
   text-align: center;
   margin-right: 10px;
   padding: 5px;
-}
-
-.tagsEtRating {
-  margin-bottom: 30px;
+  @include tablette {
+    min-width: 84px;
+    font-size: 10px;
+    min-height: 18px;
+    border-radius: 5px;
+    padding-top: 8px;
+  }
 }

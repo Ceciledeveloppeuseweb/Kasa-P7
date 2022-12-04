@@ -9,31 +9,25 @@
   align-items: flex-end;
   text-align: right;
   color: $color-ref-site;
-  @include tablette{
+  @include tablette {
     font-size: 18px;
   }
-  @include mobile{
+  @include mobile {
     font-size: 12px;
     padding-bottom: 40px;
   }
 }
-  
 
 a {
   text-decoration: none;
   padding-left: 30px;
   color: $color-ref-site;
-  
-  @include mobile{
+  @include mobile {
     padding-left: 10px;
   }
 }
-
 
 .nav-active {
   text-decoration-line: underline;
   color: $color-ref-site;
 }
-  
-
-

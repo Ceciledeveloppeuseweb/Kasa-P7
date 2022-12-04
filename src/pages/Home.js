@@ -25,7 +25,7 @@ const Home = () => {
   useEffect(() => {
     getData();
   }, []);
-//console.log(getData);
+  //console.log(getData);
   return (
     <>
       <Header />
@@ -35,30 +35,28 @@ const Home = () => {
         <img src={banner} alt="paysage côte rocheuse" className="img-banner" />
       </Banner>
 
-      
-        <main className="cards">
-          {data.map((location) => (
-           // console.log(location);
-              <NavLink to={"/location/" + location.id} className="linkCard" key={location.id}>
-                <article className="location">
-                  <img
-                    src={location.cover}
-                    alt={location.title}
-                    className="img-location"
-                  />
-                  <h2 className="titre-location">{location.title}</h2>
-                </article>
-              </NavLink>
-            )
-          )}
-        </main>
+      <main className="cards">
+        {data.map((location) => (
+          // console.log(location);
+          <NavLink
+            to={"/location/" + location.id}
+            className="linkCard"
+            key={location.id}
+          >
+            <article className="location">
+              <img
+                src={location.cover}
+                alt={location.title}
+                className="img-location"
+              />
+              <h2 className="titre-location">{location.title}</h2>
+            </article>
+          </NavLink>
+        ))}
+      </main>
       <Footer />
     </>
   );
 };
 
 export default Home;
-            
-
-            
-      

@@ -11,7 +11,7 @@ import Carrousel from "../components/Carrousel";
 
 const Fiche = () => {
   const params = useParams();
-  const [data, setData] = useState(); 
+  const [data, setData] = useState();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,6 +23,7 @@ const Fiche = () => {
       console.log(logement.pictures);
       console.log(logement.title);
       console.log(logement.location);
+      console.log(logement.pictures.length);
       //result.data.map(() => setData(logement));
       setData(logement);
 
@@ -34,7 +35,6 @@ const Fiche = () => {
     // eslint-disable-next-line
   }, []);
 
-
   //affichage conditionnel, si les données st trouvées par axios alors on affiche
   return (
     data && (
@@ -45,25 +45,31 @@ const Fiche = () => {
             {/* {pictures.map((picture, index) => (
               <Carrousel key={index} pictures={pictures} picture={picture} />
              ))} */}
-             <Carrousel  pictures={data.pictures} picture={data.pictures.picture} />
+            <Carrousel
+              pictures={data.pictures}
+              picture={data.pictures.picture}
+            />
           </div>
           <section className="fiche-infos">
-            <section className="div-titre">
+            <section className="div-titre infos-TitrePTag">
               <h1 className="fiche-titre">{data.title}</h1>
               <p className="localisation">{data.location}</p>
-            </section>
-            <Host name={data.host.name} picture={data.host.picture} />
-          </section>
-          <section className="contenerDivs">
-            <div className="tagsEtRating">
               <div className="tags">
                 {data.tags.map((tag) => (
                   <Tag key={tag} className="tag" tag={tag} />
                   // <li key={el} className="tag" >{el}</li>
                 ))}
               </div>
+            </section>
+
+            <section className="infos-HostRating">
+              <Host name={data.host.name} picture={data.host.picture} />
+
               <Rate rating={data.rating} />
-            </div>
+            </section>
+          </section>
+
+          <section className="contenerDivs">
             <div className="collapses-logement">
               <Collapse
                 title="Descriptions"

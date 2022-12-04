@@ -1,3 +1,4 @@
+//collapses Page About :
 .collapses-about {
   display: flex;
   flex-direction: column;
@@ -7,35 +8,34 @@
   @include mobile {
     width: 90%;
     margin: 0 auto 20px;
-    
   }
 }
 
-//collapses du logement :
+//collapses Fiche Logement :
 .collapses-logement {
   width: 100%;
-  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @include tablette {
+    flex-direction: column;
+  }
 }
+
 .collapses-logement > .collapse-box__logement {
-    width: 45%;
+  width: 45%;
 }
 .collapse-box {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    
-
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
+
 .collapse-box__logement {
-    width: 45%;
+  width: 45%;
 }
 
 .collapse-container {
-  // max-width: 1023px;
-  // width: 70%;
   margin: 0 auto 31px;
   width: 86%;
   margin: auto;
@@ -43,22 +43,22 @@
   //background-color: $color-header;
 }
 
-.collapse{
-    height: 47px;
-    background-color: $color-ref-site;
-    color: $color-ref-site;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 31px auto;
-    border-radius: 5px;
-    width: 100%;
-    @include mobile {
-      height: 30px;
-      margin: 20px auto 0;
-      
-    }
+//collapse css-type
+.collapse {
+  height: 47px;
+  background-color: $color-ref-site;
+  color: $color-ref-site;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 31px auto;
+  border-radius: 5px;
+  width: 100%;
+  @include mobile {
+    height: 30px;
+    margin: 20px auto 0;
   }
+}
 
 h2 {
   color: $color-h2;
@@ -93,8 +93,7 @@ h2 {
   margin-bottom: 19px;
   color: $color-ref-site;
   background-color: $color-background-div-main;
-   @include mobile {
+  @include mobile {
     font-size: 12px;
   }
 }
-  

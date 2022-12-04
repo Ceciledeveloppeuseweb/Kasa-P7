@@ -1,30 +1,25 @@
 .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: $color-h2;
-    background-color: $color-background-div-main;
-    border-radius: 25px;
-    margin-top: 43px;
-    max-width: 1240px;
-    width: 86%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: $color-h2;
+  background-color: $color-background-div-main;
+  border-radius: 25px;
+  margin-top: 43px;
+  max-width: 1240px;
+  width: 86%;
+  margin: auto;
+  padding: 6px 20px;
+  @include tablette {
+    width: 90%;
     margin: auto;
-    padding: 6px 20px;
-    @include tablette {
-        width: 90%;
-        
-        margin: auto;
-        padding: 0;
-        
-    }
-    @include mobile {
-        flex-direction: column;
-        padding: 0;
-        margin-top: 22px;
-
-    }
+    padding: 0;
   }
-    
-    
-    
+  @include mobile {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 22px;
+  }
+}
+
