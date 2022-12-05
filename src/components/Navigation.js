@@ -5,14 +5,15 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => {
     return (
         <ul className='nav'>
+            {/* className={(nav) => (nav.isActive ? "nav-active" : "")} */}
             
                 <li>
-                <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                <NavLink to="/" className="nav">
                     Accueil
                 </NavLink>
                 </li>
                 <li>
-                <NavLink to="/About" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                <NavLink to="/About" className="nav">
                     A Propos
                 </NavLink>
                 </li>

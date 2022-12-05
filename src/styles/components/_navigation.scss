@@ -29,8 +29,9 @@ a {
     text-transform: uppercase;
   }
 }
-
-.nav-active {
+a:hover {
   text-decoration-line: underline;
   color: $color-ref-site;
 }
+
+
