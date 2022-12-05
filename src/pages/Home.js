@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import banner from "../assets/banner-home.jpg";
 import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
-//import Loader from "../components/Loader";
+
 
 const Home = () => {
   const [data, setData] = useState([]);

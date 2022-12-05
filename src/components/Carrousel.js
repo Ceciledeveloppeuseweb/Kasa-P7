@@ -42,7 +42,7 @@ function Carrousel({ pictures }) {//pictures.length = nombre d'images et current
           onClick={nextSlide}
         />
       </div>
-      <div className="compteur">
+      <div className={pictures.length <= 1 ? "compteur__clear" : "compteur"}>
         {currentPicture+1}/{pictures.length}
       </div>
     </>
@@ -50,17 +50,3 @@ function Carrousel({ pictures }) {//pictures.length = nombre d'images et current
 }
 
 export default Carrousel;
-
-// return (
-//     <div className="slide-container">
-//       <Slide>
-//        {slideImages.map((slideImage, index)=> (
-//           <div className="each-slide" key={index}>
-//             <div style={{'backgroundImage': `url(${slideImage.url})`}}>
-//               <span>{slideImage.caption}</span>
-//             </div>
-//           </div>
-//         ))}
-//       </Slide>
-//     </div>
-//   )
