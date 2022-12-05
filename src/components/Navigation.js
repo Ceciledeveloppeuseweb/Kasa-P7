@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <ul className='nav'>
+        <ul className='nav nav__mobile'>
             
                 <li>
                 <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
