@@ -1,11 +1,5 @@
 .banner {
-  position: relative;
-  width: 86%;
-  max-width: 1240px;
-  overflow: hidden;
-  border-radius: 25px;
-  height: 223px;
-  margin: 63px auto 43px;
+  @include props-banner;
   @include mobile {
     height: 111px;
     border-radius: 10px;
@@ -15,13 +9,7 @@
 }
 
 .banner__about {
-  position: relative;
-  width: 86%;
-  max-width: 1240px;
-  overflow: hidden;
-  border-radius: 25px;
-  height: 223px;
-  margin: 63px auto 43px;
+  @include props-banner;
   @include mobile {
     width: 90%;
     margin: 17px auto 0;

@@ -43,4 +43,14 @@
       @content;
   }
 }
+
+@mixin props-banner {
+  position: relative;
+  width: 86%;
+  max-width: 1240px;
+  overflow: hidden;
+  border-radius: 25px;
+  height: 223px;
+  margin: 63px auto 43px;
+}
   
