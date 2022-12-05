@@ -31,14 +31,14 @@ function Carrousel({ pictures }) {//pictures.length = nombre d'images et current
         <img
           src={flecheG}
           alt="bouton slide précédent"
-          className={pictures.length === 0 ? "btn-gauche__clear" : "btn-gauche"}
+          className={pictures.length <= 1 ? "btn-gauche__clear" : "btn-gauche"}
           onClick={preventSlide}
         />
 
         <img
           src={flecheD}
           alt="bouton slide suivant"
-          className={pictures.length === 0 ? "btn-droite__clear" : "btn-droite"}
+          className={pictures.length <= 1 ? "btn-droite__clear" : "btn-droite"}
           onClick={nextSlide}
         />
       </div>
