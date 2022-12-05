@@ -18,16 +18,16 @@ const Fiche = () => {
     const displayLocation = async () => {
       const result = await axios.get("/locations.JSON"); //axios va me chercher l'Url
       const logement = result.data.find(({ id }) => id === params.id);
-      console.log(logement);
-      console.log(logement.id);
-      console.log(logement.pictures);
-      console.log(logement.title);
-      console.log(logement.location);
-      console.log(logement.pictures.length);
+      // console.log(logement);
+      // console.log(logement.id);
+      // console.log(logement.pictures);
+      // console.log(logement.title);
+      // console.log(logement.location);
+      // console.log(logement.pictures.length);
       //result.data.map(() => setData(logement));
       setData(logement);
 
-      if (logement === undefined) {
+      if (logement === undefined || null) {
         navigate("/404", { state: { message: "error" } });
       }
     };
