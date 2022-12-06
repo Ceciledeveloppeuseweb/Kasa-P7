@@ -11,12 +11,16 @@ import Carrousel from "../components/Carrousel";
 
 const Fiche = () => {
   const params = useParams();
+  //=> pendra ici l'id en paramètre
   const [data, setData] = useState();
+  //=> permet de changer l'état des données avec data comme variable avec valeur initiale et sa fonction setData fonction qui prend la modification
   const navigate = useNavigate();
+  //=> permet une redirection, une navigation vers la page 404 ici
 
-  useEffect(() => {
+
+  useEffect(() => {//=> permet d'effectuer une action, ici une requête GET, à un moment donné du cycle de vie du composant
     const displayLocation = async () => {
-      const result = await axios.get("/locations.JSON"); //axios va me chercher l'Url
+      const result = await axios.get("/locations.JSON"); //axios va me chercher l'Url, récupère les data sans besoin de convertir au format json
       const logement = result.data.find(({ id }) => id === params.id);
       // console.log(logement);
       // console.log(logement.id);
@@ -24,8 +28,8 @@ const Fiche = () => {
       // console.log(logement.title);
       // console.log(logement.location);
       // console.log(logement.pictures.length);
-      //result.data.map(() => setData(logement));
       setData(logement);
+      
 
       if (logement === undefined || null) {
         navigate("/404", { state: { message: "error" } });

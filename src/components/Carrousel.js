@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import flecheD from "../assets/fleched.svg";
 import flecheG from "../assets/flecheg.svg";
 
-function Carrousel({ pictures }) {//pictures.length = nombre d'images et currentPicture est l'index de l'image
-  console.log(pictures);
+function Carrousel({ pictures }) {//pictures.length(x) = nombre d'images et currentPicture(x-1) est l'index de l'image
+  //console.log(pictures);
 
   const [currentPicture, setCurrentPicture] = useState(0);// => représente l'index de l'image
 

@@ -22,7 +22,7 @@ const Home = () => {
   //.catch((err) => console.log(err))
   //}
 
-  useEffect(() => {
+  useEffect(() => { //=> permet d'effectuer une action
     getData();
   }, []);
   //console.log(getData);

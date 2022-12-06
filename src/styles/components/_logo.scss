@@ -3,16 +3,18 @@
   min-width: 211px;
   width: 15%;
   height: 68px;
-  @include tablette {
-    min-width: 140px;
-    max-width: 180px;
-    width: 20%;
-    height: 50px;
-  }
   @include mobile {
-    min-width: 90px;
-    max-width: 110px;
-    width: 35%;
-    height: 40px;
+    display: none;
+  }
+}
+
+.logo__mobile {
+  display: none;
+  @include mobile {
+    display: block;
+    transform: scale(0.8);
+    margin-left: -15px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
   }
 }
