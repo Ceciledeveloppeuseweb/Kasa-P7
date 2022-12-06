@@ -32,6 +32,7 @@ const Home = () => {
 
       <Banner className="banner">
         <h1 className="titre-banner">Chez vous, partout et ailleurs</h1>
+        
         <img src={banner} alt="paysage côte rocheuse" className="img-banner" />
       </Banner>
 
